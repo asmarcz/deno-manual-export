@@ -1,0 +1,17 @@
+---
+documentclass: extarticle
+fontsize: 20pt
+geometry: "left=5mm,top=5mm,right=5mm,bottom=15mm"
+header-includes:
+  - \lstset{breaklines=true}
+  - \lstset{language=[Motorola68k]Assembler}
+  - \lstset{basicstyle=\small\ttfamily}
+  - \lstset{extendedchars=true}
+  - \lstset{tabsize=2}
+  - \lstset{columns=fixed}
+  - \lstset{showstringspaces=false}
+  - \lstset{frame=trbl}
+  - \lstset{frameround=tttt}
+  - \lstset{framesep=4pt}
+  - \lstset{postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}}
+---
