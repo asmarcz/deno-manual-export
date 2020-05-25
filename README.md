@@ -2,9 +2,11 @@
 
 This is my attempt to make Deno Manual available on my Kindle because my eyes are sore.
 
-It has 20pt font and wraps code block so that they fit on the page.
+It has 20pt font and wraps code blocks so that they fit on the page.
 
 You can either grap PDF from this repository or compile yourself the latest version.
+
+You will need pandoc with xelatex.
 
 ```
 git clone --depth 1 https://github.com/asmarcz/deno-manual-export

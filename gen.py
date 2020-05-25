@@ -13,4 +13,4 @@ for cat in toc:
 for i, f in enumerate(files):
 	files[i] = "deno/docs/" + f + ".md"
 
-subprocess.run(["pandoc", "--listings", "--pdf-engine=xelatex", "--resource-path=deno/docs/images", "-o", "deno-manual.pdf", "conf.yml"] + files + ["conf.yml"])
+subprocess.run(["pandoc", "--listings", "--pdf-engine=xelatex", "--resource-path=deno/docs/images", "-o", "deno-manual.pdf"] + files + ["conf.yml"])
