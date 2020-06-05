@@ -1,5 +1,4 @@
 import json
-import subprocess
 
 toc = json.loads(open("deno/docs/toc.json").read())
 
@@ -13,4 +12,5 @@ for cat in toc:
 for i, f in enumerate(files):
 	files[i] = "deno/docs/" + f + ".md"
 
-subprocess.run(["pandoc", "--metadata-file=conf.yml", "--listings", "--pdf-engine=xelatex", "--resource-path=deno/docs/images", "-o", "deno-manual.pdf"] + files)
+for f in files:
+	print('"' + f + '" ', end='')
