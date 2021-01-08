@@ -7,8 +7,6 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-20.04
-    env:
-      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     steps:
       - uses: actions/checkout@v2
       - run: |
@@ -17,6 +15,8 @@ jobs:
           echo "::set-env name=DENOTAG::$TAG"
           cd deno && git checkout tags/"$TAG" && cd ..
           echo "::set-env name=FILELIST::$(python3 files.py)"
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       - uses: docker://pandoc/latex:2.9
         with:
           args: --metadata-file=conf.yml --listings --pdf-engine=xelatex --resource-path=deno/docs/images -o manual.pdf ${{ env.FILELIST }}
